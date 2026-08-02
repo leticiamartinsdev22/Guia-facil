@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap");
+
+:root {
+  --font-scale: 1;
+}
+
+html {
+  font-size: calc(18px * var(--font-scale));
+}
+
+body {
+  @apply bg-guia-bg text-guia-ink font-body;
+}
+
+:focus-visible {
+  outline: 3px solid #2E6F9E;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
